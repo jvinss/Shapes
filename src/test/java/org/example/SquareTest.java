@@ -17,13 +17,19 @@ public class SquareTest extends TestCase {
 
     public void testArea() {
         Square s = new Square(5);
-        int area = s.area();
+        double area = s.area();
         assertTrue(area == 25);
     }
 
     public void testPerimeter() {
         Square s = new Square(5);
-        int perimeter = s.perimeter();
+        double perimeter = s.perimeter();
         assertTrue(perimeter == 20);
+    }
+
+    public void testTestToString() {
+        Square s = new Square(5);
+        double side = 5;
+        assertTrue(s.toString().equals("Square{" + "side=" + side + '}'));
     }
 }

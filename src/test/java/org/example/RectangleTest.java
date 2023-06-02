@@ -11,13 +11,13 @@ public class RectangleTest extends TestCase {
 
     public void testArea() {
         Rectangle r = new Rectangle(5,10);
-        int area = r.area();
+        double area = r.area();
         assertTrue(area == 50);
     }
 
     public void testPerimeter() {
         Rectangle r = new Rectangle(5,10);
-        int perimeter = r.perimeter();
+        double perimeter = r.perimeter();
         assertTrue(perimeter == 30);
     }
 
@@ -41,5 +41,12 @@ public class RectangleTest extends TestCase {
         Rectangle r = new Rectangle(5,10);
         r.setHeight(20);
         assertTrue(r.getHeight() == 20);
+    }
+
+    public void testTestToString() {
+        Rectangle r = new Rectangle(5,10);
+        double base = 5;
+        double height = 10;
+        assertTrue(r.toString().equals("Rectangle{" + "base=" + base + ", height=" + height + '}'));
     }
 }

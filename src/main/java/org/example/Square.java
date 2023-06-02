@@ -1,18 +1,17 @@
 package org.example;
 
-public class Square {
-    private int side;
-    private Point center;
+public class Square extends Shape {
+    private double side;
 
-    public Square(int side) {
+    public Square(double side) {
         setSide(side);
     }
 
-    public int getSide() {
+    public double getSide() {
         return side;
     }
 
-    public void setSide(int side) {
+    public void setSide(double side) {
         this.side = side;
     }
 
@@ -24,11 +23,18 @@ public class Square {
         this.center = center;
     }
 
-    public int area () {
+    public double area () {
         return this.side*this.side;
     }
 
-    public int perimeter () {
+    public double perimeter () {
         return this.side*4;
+    }
+
+    @Override
+    public String toString() {
+        return "Square{" +
+                "side=" + side +
+                '}';
     }
 }
