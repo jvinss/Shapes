@@ -3,7 +3,8 @@ package org.example;
 public class Square extends Shape {
     private double side;
 
-    public Square(double side) {
+    public Square(Point center, double side) {
+        super(center);
         setSide(side);
     }
 
